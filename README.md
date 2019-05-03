@@ -1,2 +1,3 @@
 # LeetCode
-记录自己刷题的过程。
+
+All code here is classified by tag.
