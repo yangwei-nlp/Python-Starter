@@ -24,7 +24,7 @@ class Solution:
         total_sum = 0
         min_gap = n + 1
         l, r = 0, 0
-        while r < n:
+        while r < n:  # 注意到右指针会一直在左指针的右边
             total_sum += nums[r]
             while total_sum >= s:
                 total_sum -= nums[l]
