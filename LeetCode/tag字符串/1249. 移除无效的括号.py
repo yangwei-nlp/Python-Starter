@@ -12,13 +12,17 @@ class Solution:
                 indices.append(idx)
                 brackets.append(char)
         
-        # for idx, brac in enumerate(brackets[1:]):
-        #     if brackets[idx-1] == '(' and brac == ')':
-        #         del indices[idx]
-        #         del indices[idx-1]
+        for i, (idx, brac) in enumerate(zip(indices[1:], brackets[1:])):
+            i += 1
+            if brackets[i-1] == '(' and brac == ')':
+                del indices[i]
+                del brackets[i]
+                del indices[i-1]
+                del brackets[i-1]
         print(indices)
 
 
 
 s = Solution()
 print(s.minRemoveToMakeValid("lee(t(c)o)de)"))
+
